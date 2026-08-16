@@ -23,6 +23,7 @@ import lombok.ToString;
 import lombok.EqualsAndHashCode;
 
 import com.github.derick01.pantry_tracker.enums.Category;
+import com.github.derick01.pantry_tracker.enums.Unit;
 
 @Getter
 @Setter
@@ -48,4 +49,10 @@ public class ProductDTO {
 
     @NotNull(message = "Category is required")
     private Category category;
+
+    @Positive(message = "Low quantity threshold must be greater than zero")
+    private BigDecimal lowThreshold;
+
+    @NotNull(message = "Unit is required")
+    private Unit unit;
 }

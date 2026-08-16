@@ -21,11 +21,14 @@ import jakarta.persistence.EnumType;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.CascadeType;
 
+import org.hibernate.annotations.UuidGenerator;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
 
 import com.github.derick01.pantry_tracker.enums.Category;
+import com.github.derick01.pantry_tracker.enums.Unit;
 
 @Entity
 @Table(name = "products")
@@ -38,7 +41,9 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @UuidGenerator
     private UUID externalId;
+    
     private String name;
     private String sku;
     private String brand;
@@ -46,6 +51,11 @@ public class Product {
 
     @Enumerated(EnumType.STRING)
     private Category category;
+
+    private BigDecimal lowThreshold;
+
+    @Enumerated(EnumType.STRING)
+    private Unit unit;
 
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Batch> batches;
