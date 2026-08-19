@@ -5,7 +5,7 @@
  * Author: Derick Canceran
  */
 
-package com.github.derick01.pantry_tracker.entity;
+package com.github.derick01.inventorymanager.entity;
 
 import java.util.UUID;
 import java.time.LocalDate;
@@ -27,8 +27,8 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
 
-import com.github.derick01.pantry_tracker.enums.Unit;
-import com.github.derick01.pantry_tracker.enums.ShelfLocation;
+import com.github.derick01.inventorymanager.enums.Unit;
+import com.github.derick01.inventorymanager.enums.ShelfLocation;
 
 @Entity
 @Table(name = "batches")

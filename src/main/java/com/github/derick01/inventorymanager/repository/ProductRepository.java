@@ -5,7 +5,7 @@
  * Author: Derick Canceran
  */
 
-package com.github.derick01.pantry_tracker.repository;
+package com.github.derick01.inventorymanager.repository;
 
 import java.util.List;
 import java.util.UUID;
@@ -16,7 +16,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import com.github.derick01.pantry_tracker.entity.Product;
+import com.github.derick01.inventorymanager.entity.Product;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {

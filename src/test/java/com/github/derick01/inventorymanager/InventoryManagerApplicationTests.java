@@ -1,10 +1,10 @@
-package com.github.derick01.pantry_tracker;
+package com.github.derick01.inventorymanager;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PantryTrackerApplicationTests {
+class InventoryManagerApplicationTests {
 
 	@Test
 	void contextLoads() {

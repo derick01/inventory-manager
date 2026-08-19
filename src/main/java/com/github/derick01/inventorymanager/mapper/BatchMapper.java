@@ -6,7 +6,7 @@
  * Author: Derick Canceran
  */
 
-package com.github.derick01.pantry_tracker.mapper;
+package com.github.derick01.inventorymanager.mapper;
 
 import java.util.List;
 
@@ -16,8 +16,8 @@ import org.mapstruct.BeanMapping;
 import org.mapstruct.MappingTarget;
 import org.mapstruct.NullValuePropertyMappingStrategy;
 
-import com.github.derick01.pantry_tracker.dtos.BatchDTO;
-import com.github.derick01.pantry_tracker.entity.Batch;
+import com.github.derick01.inventorymanager.dtos.BatchDTO;
+import com.github.derick01.inventorymanager.entity.Batch;
 
 @Mapper(componentModel = "spring")
 public interface BatchMapper {

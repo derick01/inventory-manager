@@ -5,7 +5,7 @@
  * Author: Derick Canceran
  */
 
-package com.github.derick01.pantry_tracker.service;
+package com.github.derick01.inventorymanager.service;
 
 import java.util.List;
 import java.util.UUID;
@@ -16,11 +16,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.github.derick01.pantry_tracker.repository.ProductRepository;
-import com.github.derick01.pantry_tracker.dtos.ProductDTO;
-import com.github.derick01.pantry_tracker.entity.Product;
-import com.github.derick01.pantry_tracker.mapper.ProductMapper;
-import com.github.derick01.pantry_tracker.exception.ResourceNotFoundException;
+import com.github.derick01.inventorymanager.repository.ProductRepository;
+import com.github.derick01.inventorymanager.dtos.ProductDTO;
+import com.github.derick01.inventorymanager.entity.Product;
+import com.github.derick01.inventorymanager.mapper.ProductMapper;
+import com.github.derick01.inventorymanager.exception.ResourceNotFoundException;
 
 @Service
 public class ProductService {

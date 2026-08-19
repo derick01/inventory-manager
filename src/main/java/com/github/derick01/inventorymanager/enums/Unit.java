@@ -5,7 +5,7 @@
  * Author: Derick Canceran
  */
 
-package com.github.derick01.pantry_tracker.enums;
+package com.github.derick01.inventorymanager.enums;
 
 public enum Unit {
     KILOGRAMS,

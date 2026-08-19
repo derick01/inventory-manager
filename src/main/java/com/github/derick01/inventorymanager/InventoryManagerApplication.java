@@ -1,13 +1,13 @@
-package com.github.derick01.pantry_tracker;
+package com.github.derick01.inventorymanager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PantryTrackerApplication {
+public class InventoryManagerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PantryTrackerApplication.class, args);
+		SpringApplication.run(InventoryManagerApplication.class, args);
 	}
 
 }

@@ -1,2 +1,2 @@
-# pantry-inventory-tracker
-An app for tracking your pantry supplies
+# Inventory and Batch Management Engine
+A backend for tracking inventory and batches.

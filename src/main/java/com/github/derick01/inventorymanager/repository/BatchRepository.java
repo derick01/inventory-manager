@@ -5,7 +5,7 @@
  * Author: Derick Canceran
  */
 
-package com.github.derick01.pantry_tracker.repository;
+package com.github.derick01.inventorymanager.repository;
 
 import java.util.List;
 import java.util.UUID;
@@ -19,7 +19,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import org.springframework.data.repository.query.Param;
 
-import com.github.derick01.pantry_tracker.entity.Batch;
+import com.github.derick01.inventorymanager.entity.Batch;
 
 @Repository
 public interface BatchRepository extends JpaRepository<Batch, Long> {

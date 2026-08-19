@@ -5,7 +5,7 @@
  * Author: Derick Canceran
  */
 
-package com.github.derick01.pantry_tracker.exception;
+package com.github.derick01.inventorymanager.exception;
 
 import java.time.LocalDateTime;
 import java.util.LinkedHashMap;

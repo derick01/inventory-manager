@@ -6,7 +6,7 @@
  * Author: Derick Canceran
  */
 
-package com.github.derick01.pantry_tracker.mapper;
+package com.github.derick01.inventorymanager.mapper;
 
 import java.util.List;
 
@@ -16,8 +16,8 @@ import org.mapstruct.BeanMapping;
 import org.mapstruct.MappingTarget;
 import org.mapstruct.NullValuePropertyMappingStrategy;
 
-import com.github.derick01.pantry_tracker.dtos.ProductDTO;
-import com.github.derick01.pantry_tracker.entity.Product;
+import com.github.derick01.inventorymanager.dtos.ProductDTO;
+import com.github.derick01.inventorymanager.entity.Product;
 
 @Mapper(componentModel = "spring")
 public interface ProductMapper {

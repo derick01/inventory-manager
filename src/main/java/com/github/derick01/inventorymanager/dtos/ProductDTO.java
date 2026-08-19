@@ -5,7 +5,7 @@
  * Author: Derick Canceran
  */
 
-package com.github.derick01.pantry_tracker.dtos;
+package com.github.derick01.inventorymanager.dtos;
 
 import java.util.UUID;
 import java.math.BigDecimal;
@@ -22,8 +22,8 @@ import lombok.AllArgsConstructor;
 import lombok.ToString;
 import lombok.EqualsAndHashCode;
 
-import com.github.derick01.pantry_tracker.enums.Category;
-import com.github.derick01.pantry_tracker.enums.Unit;
+import com.github.derick01.inventorymanager.enums.Category;
+import com.github.derick01.inventorymanager.enums.Unit;
 
 @Getter
 @Setter
