@@ -42,7 +42,8 @@ public class ProductService {
     public ProductDTO getProductByExternalId(UUID externalId) {
         Product product = productRepository.findByExternalId(externalId)
                             .orElseThrow(() -> new ResourceNotFoundException(
-                                            "Product not found"));
+                                String.format(
+                                "Product with external id %s not found", externalId.toString())));
         ProductDTO productAsDTO  = productMapper.toDto(product);
         return productAsDTO;
     }
@@ -61,7 +62,9 @@ public class ProductService {
                                     .findByExternalId(externalId)
                                     .orElseThrow(() 
                                             -> new ResourceNotFoundException(
-                                                "Product not found"));
+                                        String.format(
+                                        "Product with external id %s not found",
+                                        externalId.toString())));
 
         existingProduct = productMapper.updateProductFromDto(updatedProductDto,
                                                              existingProduct);
@@ -75,7 +78,9 @@ public class ProductService {
     public void deleteProductByExternalId(UUID externalId) {
         Product product = productRepository.findByExternalId(externalId)
                             .orElseThrow(() -> new ResourceNotFoundException(
-                                            "Product not found"));
+                            String.format(
+                            "Product with external id %s not found",
+                            externalId.toString())));
         productRepository.delete(product);
     }
 }

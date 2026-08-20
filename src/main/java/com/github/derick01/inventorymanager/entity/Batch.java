@@ -57,4 +57,20 @@ public class Batch {
     
     @Enumerated(EnumType.STRING)
     private ShelfLocation shelfLocation;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (!(o instanceof Batch))
+            return false;
+            
+        Batch batch = (Batch) o;
+        return id != null && id.equals(batch.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
 }

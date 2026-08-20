@@ -9,6 +9,7 @@ package com.github.derick01.inventorymanager.entity;
 
 import java.util.UUID;
 import java.util.List;
+import java.util.ArrayList;
 import java.math.BigDecimal;
 
 import jakarta.persistence.Entity;
@@ -58,5 +59,31 @@ public class Product {
     private Unit unit;
 
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Batch> batches;
+    private List<Batch> batches = new ArrayList<>();
+
+    public void addBatch(Batch batch) {
+        batches.add(batch);
+        batch.setProduct(this);
+    }
+
+    public void removeBatch(Batch batch) {
+        batches.remove(batch);
+        batch.setProduct(null);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (!(o instanceof Product))
+            return false;
+            
+        Product product = (Product) o;
+        return id != null && id.equals(product.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
 }

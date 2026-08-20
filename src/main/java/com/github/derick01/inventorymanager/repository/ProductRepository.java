@@ -24,7 +24,7 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     Optional<Product> findByExternalId(UUID externalId);
 
     @Query("SELECT p " +
-           "FROM Products p " +
+           "FROM Product p " +
            "LEFT JOIN p.batches b " +
            "GROUP BY p.id " +
            "HAVING COALESCE(SUM(b.quantity), 0) < p.lowThreshold")
