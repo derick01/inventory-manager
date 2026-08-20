@@ -10,6 +10,6 @@ CREATE TABLE IF NOT EXISTS products (
     brand VARCHAR(100) NOT NULL,
     price DECIMAL(18,8),
     category VARCHAR(100),
-    quantity NUMERIC(19,2) NOT NULL DEFAULT 2.00,
+    low_threshold NUMERIC(19,2) NOT NULL DEFAULT 2.00,
     unit VARCHAR(50) NOT NULL
 );
